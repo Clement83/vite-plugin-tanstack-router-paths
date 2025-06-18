@@ -2,6 +2,10 @@
 
 A Vite plugin that automatically generates type-safe navigation helpers for TanStack Router routes. This plugin watches your `routeTree.gen.ts` file and generates static methods to build route paths with full TypeScript support.
 
+[![npm](https://img.shields.io/npm/v/vite-plugin-tanstack-router-paths.svg)](https://www.npmjs.com/package/vite-plugin-tanstack-router-paths)
+[![license](https://img.shields.io/npm/l/vite-plugin-tanstack-router-paths.svg)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/clement83/vite-plugin-tanstack-router-paths.svg)](https://github.com/clement83/vite-plugin-tanstack-router-paths)
+
 ## Why this plugin?
 
 When using TanStack Router, you often need to navigate to specific routes programmatically. Instead of writing hardcoded strings like `/users/123/posts/456`, this plugin generates type-safe methods like `RoutePaths.usersByUserIdPostsByPostId(123, 456)`.
