@@ -56,7 +56,6 @@ export function routePathsPlugin(options: RoutePathsPluginOptions = {}): Plugin 
                 watcher = watch(inputFullPath);
 
                 watcher.on('change', async () => {
-                    console.log(`[route-paths] Detected change in ${inputPath}`);
                     await generateRoutePaths();
                 });
             }
@@ -94,7 +93,6 @@ export function routePathsPlugin(options: RoutePathsPluginOptions = {}): Plugin 
             // Write output file
             await fs.writeFile(outputFullPath, generatedCode, 'utf-8');
 
-            console.log(`[route-paths] Generated ${routes.length} methods in ${outputPath}`);
 
         } catch (error) {
             console.error('[route-paths] Error during generation:', error);
